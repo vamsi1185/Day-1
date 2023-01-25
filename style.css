@@ -40,6 +40,7 @@ body {
   background-repeat: none;
   height: 80vh;
   position: relative;
+  cursor: pointer;
 }
 .panel h3 {
   font-size: 24px;
