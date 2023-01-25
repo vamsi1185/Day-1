@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.panel:nth-of-type(1) {
+  background-image: url(https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?cs=srgb&dl=pexels-pixabay-206359.jpg&fm=jpg);
+}
+.panel:nth-of-type(2) {
+  background-image: url(https://img.freepik.com/free-photo/beautiful-scenery-phragmites-plants-by-sea-with-swimming-pelican-sunset_181624-37787.jpg?w=2000);
+}
+.panel:nth-of-type(3) {
+  background-image: url(https://i.pinimg.com/originals/d4/2b/60/d42b60311c9d0cfc45b74f9a805f4cec.jpg);
+}
+.panel:nth-of-type(4) {
+  background-image: url(https://thumbs.dreamstime.com/b/beautiful-golden-autumn-scenery-trees-golden-leaves-sunshine-scotland-united-kingdom-beautiful-golden-autumn-124278811.jpg);
+}
+.panel:nth-of-type(5) {
+  background-image: url(https://wallpaperaccess.com/full/359168.jpg);
+}
+.container {
+  width: 90vw;
+  display: flex;
+}
+
+.panel {
+  flex: 0.5;
+  transition: flex 0.7s ease-in;
+  margin: 20px;
+  border-radius: 50px;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: none;
+  height: 80vh;
+  position: relative;
+}
+.panel h3 {
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  opacity: 0;
+}
+.panel.active {
+  flex: 5;
+}
+.panel.active h3 {
+  transition: opacity 0.3s ease-in 0.4s;
+  opacity: 0.7;
+}
+@media (max-width: 400px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
